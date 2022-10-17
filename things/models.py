@@ -1,8 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 from django.core.validators import MinValueValidator, MaxValueValidator
 
-class Thing(AbstractUser):
+class Thing(models.Model):
     name = models.CharField(
         unique=True,
         blank=False,
