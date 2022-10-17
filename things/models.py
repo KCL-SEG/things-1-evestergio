@@ -3,12 +3,12 @@ from django.contrib.auth.models import AbstractUser
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Thing(AbstractUser):
-    name = models.TextField(
+    name = models.CharField(
         unique = True,
         blank = False,
         max_length = 30,
     )
-    description = models.TextField(
+    description = models.CharField(
         unique = False,
         blank = True,
         max_length = 120,
